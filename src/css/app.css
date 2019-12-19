@@ -183,6 +183,10 @@ a.active-nav {
     padding: 10px; }
     .password-form input::placeholder {
       color: #484848; }
+  .password-form input:hover {
+    border: 1px solid #fff; }
+  .password-form input:focus {
+    border: 1px solid #fff; }
   .password-form label {
     font-size: 18px;
     line-height: 21px;
@@ -411,6 +415,8 @@ footer {
     margin-top: 10px; }
   .modal--form input:hover {
     border: 1px solid #fff; }
+  .modal--form input:focus {
+    border: 1px solid #fff; }
 
 .modal--checkbox input {
   appearance: none;
@@ -470,14 +476,14 @@ button.btn.close-btn {
   text-align: center;
   color: white;
   position: absolute;
-  top: 150px;
+  top: 100px;
   right: 150px;
   font-size: 60px;
   width: 66px;
   border-radius: 50%;
   border: 2px solid white;
   height: 66px;
-  line-height: 33px; }
+  line-height: 34px; }
 
 /* myrobot1.html */
 .h--container {
