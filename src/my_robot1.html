@@ -7,27 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
     <title>Document</title>
 </head>
 <body>
 
-<section class="main-background">
+<section class="vh100 main-background">
     <div class="container">
         <div class="row">
-            <div class="nav">
-                <a class="col-md-3" href="profile.html">Профиль</a>
-                <a class="col-md-3 active-nav" href="my_robot1.html">Мой робот</a>
-                <a class="col-md-3" href="history.html">История</a>
-                <a class="col-md-3" href="team.html">Команда</a>
+            <div class="nav d-none d-lg-flex">
+                <a class="col-lg-3" href="profile.html">Профиль</a>
+                <a class="col-lg-3 active-nav" href="my_robot1.html">Мой робот</a>
+                <a class="col-lg-3" href="history.html">История</a>
+                <a class="col-lg-3" href="team.html">Команда</a>
             </div>
         </div>
+    </div>
+
+    <div class="nav-bar--btn d-lg-none">
+        <button class="btn" onclick="handleMediaMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
 
     <section class="membership">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-12 text-center d-lg-none member--typ-phone">
+                            <h2>Мой робот</h2>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-12 h--container">
                             <h1>Подписки</h1>
@@ -48,62 +60,73 @@
                         </div>
                     </div>
                     <div class="row special">
-                        <div class="col-lg-12">
-                            <div class="row justify-content-center special--list">
-                                <div class="col-lg-3 special--item text-center" onclick="choose('light')" id="light">
-                                    <div class="special--item-header">
-                                        <h2>Light</h2>
-                                    </div>
-                                    <div class="special--item-caption">
-                                        <p class="spec--item-date">
-                                            12 месяцев
-                                        </p>
-                                        <p class="spec--item-max-price">
-                                            Макс. депозит <br>
-                                            <span>1000$</span>
-                                        </p>
-                                        <p class="spec--item-price">
-                                            250$
-                                        </p>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12 d-lg-none text-left special--typ-phone">
+                                    <h1>Купить робота</h1>
+                                </div>
+                            </div>
+                            <div class="row justify-content-lg-center special--list">
+                                <div class="col-4 col-lg-3 text-center">
+                                    <div class="special--item" onclick="choose('light')" id="light">
+                                        <div class="special--item-header">
+                                            <h2>Light</h2>
+                                        </div>
+                                        <div class="special--item-caption">
+                                            <p class="spec--item-date">
+                                                12 месяцев
+                                            </p>
+                                            <p class="spec--item-max-price">
+                                                Макс. депозит <br>
+                                                <span>1000$</span>
+                                            </p>
+                                            <p class="spec--item-price">
+                                                250$
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 special--item text-center" onclick="choose('base')" id="base">
-                                    <div class="special--item-header">
-                                        <h2>Base</h2>
-                                    </div>
-                                    <div class="special--item-caption">
-                                        <p class="spec--item-date">
-                                            12 месяцев
-                                        </p>
-                                        <p class="spec--item-max-price">
-                                            Макс. депозит <br>
-                                            <span>3000$</span>
-                                        </p>
-                                        <p class="spec--item-price">
-                                            400$
-                                        </p>
+                                <div class="col-4 col-lg-3 text-center">
+                                    <div class="special--item" onclick="choose('base')" id="base">
+                                        <div class="special--item-header">
+                                            <h2>Base</h2>
+                                        </div>
+                                        <div class="special--item-caption">
+                                            <p class="spec--item-date">
+                                                12 месяцев
+                                            </p>
+                                            <p class="spec--item-max-price">
+                                                Макс. депозит <br>
+                                                <span>3000$</span>
+                                            </p>
+                                            <p class="spec--item-price">
+                                                400$
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 special--item text-center" onclick="choose('pro')" id="pro">
-                                    <div class="special--item-header">
-                                        <h2>Pro</h2>
-                                    </div>
-                                    <div class="special--item-caption">
-                                        <p class="spec--item-date">
-                                            12 месяцев
-                                        </p>
-                                        <p class="spec--item-max-price">
-                                            Макс. депозит <br>
-                                            <span>10000$</span>
-                                        </p>
-                                        <p class="spec--item-price">
-                                            750$
-                                        </p>
+                                <div class="col-4 col-lg-3 text-center">
+                                    <div class="special--item" onclick="choose('pro')" id="pro">
+                                        <div class="special--item-header">
+                                            <h2>Pro</h2>
+                                        </div>
+                                        <div class="special--item-caption">
+                                            <p class="spec--item-date">
+                                                12 месяцев
+                                            </p>
+                                            <p class="spec--item-max-price">
+                                                Макс. депозит <br>
+                                                <span>10000$</span>
+                                            </p>
+                                            <p class="spec--item-price">
+                                                750$
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row justify-content-center special--btn">
-                                <div class="col-lg-12 text-center">
+                                <div class="col-lg-12 text-md-center text-left">
                                     <button class="btn spec--btn">
                                         Купить робота
                                     </button>
@@ -123,7 +146,26 @@
     </div>
 </div>
 
-<footer class="footer d-flex align-items-center">
+<div class="media-menu">
+    <div class="media-menu--header d-flex justify-content-center">
+        <img src="img/logo_footer.png" alt="">
+    </div>
+    <div class="media-menu--nav d-flex text-center justify-content-center">
+        <ul>
+            <li><a href="profile.html">Профиль</a></li>
+            <li><a href="my_robot1.html">Мой робот</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="team.html">Команда</a></li>
+        </ul>
+    </div>
+    <div class="media-menu--footer text-center">
+        <a href="#" class="media-menu--exit">Выход</a>
+        <br>
+        <a href="#">Лицензионное соглашение</a>
+    </div>
+</div>
+
+<footer class="footer d-none d-lg-flex align-items-center">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-4">
@@ -153,6 +195,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
-
+<script defer src="js/all.js"></script>
 </body>
 </html>

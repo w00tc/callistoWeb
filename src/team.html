@@ -13,10 +13,10 @@
 </head>
 <body>
 
-<section class="main-background">
+<section class="vh100 main-background">
     <div class="container">
         <div class="row">
-            <div class="nav">
+            <div class="nav d-lg-flex d-none">
                 <a class="col-md-3" href="profile.html">Профиль</a>
                 <a class="col-md-3" href="my_robot1.html">Мой робот</a>
                 <a class="col-md-3" href="history.html">История</a>
@@ -24,100 +24,112 @@
             </div>
         </div>
     </div>
+
+    <div class="nav-bar--btn d-lg-none">
+        <button class="btn" onclick="handleMediaMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
     <section class="team">
         <div class="container">
+            <div class="row">
+                <div class="col-12 text-center d-lg-none member--typ-phone">
+                    <h2>Команда</h2>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12 h--container">
                     <h1>Рефералы</h1>
                 </div>
             </div>
             <div class="row team--head">
-                <div class="col-lg-6">
+                <div class="col-6">
                     Имя
                 </div>
-                <div class="col-lg-3">
+                <div class="col-3">
                     Тип лицензии
                 </div>
-                <div class="col-lg-3">
+                <div class="col-3">
                     Уровень
                 </div>
             </div>
             <div class="row team--list">
                 <div class="col-lg-12">
                     <div class="team--item d-flex align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-6">
                             Иванов Иван Иванович
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-3">
                             Light
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-3">
                             Уровень I
                         </div>
                     </div>
                     <div class="team--item d-flex align-items-center">
-                        <div class="col-lg-6">
-                            Кузнецов Иван Антонович
-                        </div>
-                        <div class="col-lg-3">
-                            Light
-                        </div>
-                        <div class="col-lg-3">
-                            Уровень I
-                        </div>
-                    </div>
-                    <div class="team--item d-flex align-items-center">
-                        <div class="col-lg-6">
-                            Антонов Кузьма Иванович
-                        </div>
-                        <div class="col-lg-3">
-                            Light
-                        </div>
-                        <div class="col-lg-3">
-                            Уровень I
-                        </div>
-                    </div>
-                    <div class="team--item d-flex align-items-center">
-                        <div class="col-lg-6">
-                            Сергеев Иван Иванович
-                        </div>
-                        <div class="col-lg-3">
-                            Pro
-                        </div>
-                        <div class="col-lg-3">
-                            Уровень I
-                        </div>
-                    </div>
-                    <div class="team--item d-flex align-items-center">
-                        <div class="col-lg-6">
-                            Антонов Кузьма Иванович
-                        </div>
-                        <div class="col-lg-3">
-                            Pro
-                        </div>
-                        <div class="col-lg-3">
-                            Уровень II
-                        </div>
-                    </div>
-                    <div class="team--item d-flex align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-6">
                             Иванов Иван Иванович
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-3">
                             Light
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-3">
                             Уровень I
                         </div>
                     </div>
                     <div class="team--item d-flex align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-6">
                             Иванов Иван Иванович
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-3">
                             Light
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-3">
+                            Уровень I
+                        </div>
+                    </div>
+                    <div class="team--item d-flex align-items-center">
+                        <div class="col-6">
+                            Иванов Иван Иванович
+                        </div>
+                        <div class="col-3">
+                            Light
+                        </div>
+                        <div class="col-3">
+                            Уровень I
+                        </div>
+                    </div>
+                    <div class="team--item d-flex align-items-center">
+                        <div class="col-6">
+                            Иванов Иван Иванович
+                        </div>
+                        <div class="col-3">
+                            Light
+                        </div>
+                        <div class="col-3">
+                            Уровень I
+                        </div>
+                    </div>
+                    <div class="team--item d-flex align-items-center">
+                        <div class="col-6">
+                            Иванов Иван Иванович
+                        </div>
+                        <div class="col-3">
+                            Light
+                        </div>
+                        <div class="col-3">
+                            Уровень I
+                        </div>
+                    </div>
+                    <div class="team--item d-flex align-items-center">
+                        <div class="col-6">
+                            Иванов Иван Иванович
+                        </div>
+                        <div class="col-3">
+                            Light
+                        </div>
+                        <div class="col-3">
                             Уровень I
                         </div>
                     </div>
@@ -125,7 +137,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="list--filter"></div>
+                    <div class="list--filter d-none d-lg-block"></div>
                 </div>
             </div>
         </div>
@@ -138,7 +150,26 @@
     </div>
 </div>
 
-<footer class="footer d-flex align-items-center">
+<div class="media-menu">
+    <div class="media-menu--header d-flex justify-content-center">
+        <img src="img/logo_footer.png" alt="">
+    </div>
+    <div class="media-menu--nav d-flex text-center justify-content-center">
+        <ul>
+            <li><a href="profile.html">Профиль</a></li>
+            <li><a href="my_robot1.html">Мой робот</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="team.html">Команда</a></li>
+        </ul>
+    </div>
+    <div class="media-menu--footer text-center">
+        <a href="#" class="media-menu--exit">Выход</a>
+        <br>
+        <a href="#">Лицензионное соглашение</a>
+    </div>
+</div>
+
+<footer class="footer d-lg-flex d-none align-items-center">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-4">

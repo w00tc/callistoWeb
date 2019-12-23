@@ -13,10 +13,10 @@
 </head>
 <body>
 
-<section class="main-background">
+<section class="vh100 main-background">
     <div class="container">
         <div class="row">
-            <div class="nav">
+            <div class="nav d-none d-lg-flex">
                 <a class="col-md-3" href="profile.html">Профиль</a>
                 <a class="col-md-3" href="my_robot1.html">Мой робот</a>
                 <a class="col-md-3 active-nav" href="history.html">История</a>
@@ -24,26 +24,38 @@
             </div>
         </div>
     </div>
+
+    <div class="nav-bar--btn d-lg-none">
+        <button class="btn" onclick="handleMediaMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
     <section class="history">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
+                        <div class="col-12 text-center d-lg-none member--typ-phone">
+                            <h2>История</h2>
+                        </div>
+                    </div>
+                    <div class="row d-none d-lg-block">
                         <div class="col-lg-12 h--container">
                             <h1>История операций и начислений</h1>
                         </div>
                     </div>
                     <div class="row history--filters">
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 col-3 col-sm-2">
                             <button class="btn btn--filters">Все</button>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-5 col-sm-3">
                             <button class="btn btn--filters">Поступления</button>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-5 col-sm-3">
                             <button class="btn btn--filters">Списания</button>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-7 col-sm-4">
                             <select class="custom-select history--select">
                                 <option>Сортировка</option>
                                 <option>По дате по возрастанию</option>
@@ -53,142 +65,144 @@
                             </select>
                         </div>
                     </div>
+                    <div class="row d-block d-lg-none">
+                        <div class="col-lg-12 h--container">
+                            <h1>История операций и начислений</h1>
+                        </div>
+                    </div>
                     <div class="row history--list">
                         <div class="col-lg-12">
                             <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
                                     Пополнение средств
                                 </div>
-                                <div class="col-lg-2 his--price-true text-center">
+                                <div class="col-lg-2 col-2 his--price-true text-center">
                                     300$
                                 </div>
-                                <div class="col-lg-2 his--date text-right">
+                                <div class="col-lg-2 col-3 his--date text-right">
                                     11/12/19
                                 </div>
-                                <div class="col-lg-2 his--status-default text-right">
-                                    В процессе <i class="far fa-question-circle"></i>
-                                    <div class="poppover">
-                                        hello
-                                    </div>
+                                <div class="col-lg-2 col-4 his--status-default text-lg-right text-center">
+                                    В процессе <i class="far fa-question-circle d-lg-inline d-none"></i>
                                 </div>
                             </div>
                             <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
-                                    Покупка лицензии пакет “light”
-                                </div>
-                                <div class="col-lg-2 his--price-false text-center">
-                                    250$
-                                </div>
-                                <div class="col-lg-2 his--date text-right">
-                                    11/12/19
-                                </div>
-                                <div class="col-lg-2 his--status-true text-right">
-                                    Исполнено <i class="far fa-question-circle"></i>
-                                </div>
-                            </div>
-                            <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
-                                    Вывод средств
-                                </div>
-                                <div class="col-lg-2 his--price-default text-center">
-                                    50$
-                                </div>
-                                <div class="col-lg-2 his--date text-right">
-                                    11/12/19
-                                </div>
-                                <div class="col-lg-2 his--status-false text-right">
-                                    Отклонена <i class="far fa-question-circle"></i>
-                                </div>
-                            </div>
-                            <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
                                     Пополнение средств
                                 </div>
-                                <div class="col-lg-2 his--price-true text-center">
-                                    300$
-                                </div>
-                                <div class="col-lg-2 his--date text-right">
-                                    11/12/19
-                                </div>
-                                <div class="col-lg-2 his--status-default text-right">
-                                    В процессе <i class="far fa-question-circle"></i>
-                                </div>
-                            </div>
-                            <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
-                                    Покупка лицензии пакет “light”
-                                </div>
-                                <div class="col-lg-2 his--price-false text-center">
-                                    250$
-                                </div>
-                                <div class="col-lg-2 his--date text-right">
-                                    11/12/19
-                                </div>
-                                <div class="col-lg-2 his--status-true text-right">
-                                    Исполнено <i class="far fa-question-circle"></i>
-                                </div>
-                            </div>
-                            <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
-                                    Вывод средств
-                                </div>
-                                <div class="col-lg-2 his--price-default text-center">
+                                <div class="col-lg-2 col-2 his--price-false text-center">
                                     50$
                                 </div>
-                                <div class="col-lg-2 his--date text-right">
+                                <div class="col-lg-2 col-3 his--date text-right">
                                     11/12/19
                                 </div>
-                                <div class="col-lg-2 his--status-false text-right">
-                                    Отклонена <i class="far fa-question-circle"></i>
+                                <div class="col-lg-2 col-4 his--status-true text-lg-right text-center">
+                                    Исполнено <i class="far fa-question-circle d-lg-inline d-none"></i>
                                 </div>
                             </div>
                             <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
                                     Пополнение средств
                                 </div>
-                                <div class="col-lg-2 his--price-true text-center">
+                                <div class="col-lg-2 col-2 his--price-default text-center">
+                                    150$
+                                </div>
+                                <div class="col-lg-2 col-3 his--date text-right">
+                                    11/12/19
+                                </div>
+                                <div class="col-lg-2 col-4 his--status-false text-lg-right text-center">
+                                    Отклонено <i class="far fa-question-circle d-lg-inline d-none"></i>
+                                </div>
+                            </div>
+                            <div class="history--item d-flex align-items-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
+                                    Пополнение средств
+                                </div>
+                                <div class="col-lg-2 col-2 his--price-true text-center">
                                     300$
                                 </div>
-                                <div class="col-lg-2 his--date text-right">
+                                <div class="col-lg-2 col-3 his--date text-right">
                                     11/12/19
                                 </div>
-                                <div class="col-lg-2 his--status-default text-right">
-                                    В процессе <i class="far fa-question-circle"></i>
+                                <div class="col-lg-2 col-4 his--status-default text-lg-right text-center">
+                                    В процессе <i class="far fa-question-circle d-lg-inline d-none"></i>
                                 </div>
                             </div>
                             <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
-                                    Покупка лицензии пакет “light”
+                                <div class="col-lg-6 col-4 his--name text-center">
+                                    Пополнение средств
                                 </div>
-                                <div class="col-lg-2 his--price-false text-center">
-                                    250$
-                                </div>
-                                <div class="col-lg-2 his--date text-right">
-                                    11/12/19
-                                </div>
-                                <div class="col-lg-2 his--status-true text-right">
-                                    Исполнено <i class="far fa-question-circle"></i>
-                                </div>
-                            </div>
-                            <div class="history--item d-flex align-items-center">
-                                <div class="col-lg-6 his--name text-center">
-                                    Вывод средств
-                                </div>
-                                <div class="col-lg-2 his--price-default text-center">
+                                <div class="col-lg-2 col-2 his--price-false text-center">
                                     50$
                                 </div>
-                                <div class="col-lg-2 his--date text-right">
+                                <div class="col-lg-2 col-3 his--date text-right">
                                     11/12/19
                                 </div>
-                                <div class="col-lg-2 his--status-false text-right">
-                                    Отклонена <i class="far fa-question-circle"></i>
+                                <div class="col-lg-2 col-4 his--status-true text-lg-right text-center">
+                                    Исполнено <i class="far fa-question-circle d-lg-inline d-none"></i>
+                                </div>
+                            </div>
+                            <div class="history--item d-flex align-items-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
+                                    Пополнение средств
+                                </div>
+                                <div class="col-lg-2 col-2 his--price-default text-center">
+                                    150$
+                                </div>
+                                <div class="col-lg-2 col-3 his--date text-right">
+                                    11/12/19
+                                </div>
+                                <div class="col-lg-2 col-4 his--status-false text-lg-right text-center">
+                                    Отклонено <i class="far fa-question-circle d-lg-inline d-none"></i>
+                                </div>
+                            </div>
+                            <div class="history--item d-flex align-items-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
+                                    Пополнение средств
+                                </div>
+                                <div class="col-lg-2 col-2 his--price-true text-center">
+                                    300$
+                                </div>
+                                <div class="col-lg-2 col-3 his--date text-right">
+                                    11/12/19
+                                </div>
+                                <div class="col-lg-2 col-4 his--status-default text-lg-right text-center">
+                                    В процессе <i class="far fa-question-circle d-lg-inline d-none"></i>
+                                </div>
+                            </div>
+                            <div class="history--item d-flex align-items-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
+                                    Пополнение средств
+                                </div>
+                                <div class="col-lg-2 col-2 his--price-false text-center">
+                                    50$
+                                </div>
+                                <div class="col-lg-2 col-3 his--date text-right">
+                                    11/12/19
+                                </div>
+                                <div class="col-lg-2 col-4 his--status-true text-lg-right text-center">
+                                    Исполнено <i class="far fa-question-circle d-lg-inline d-none"></i>
+                                </div>
+                            </div>
+                            <div class="history--item d-flex align-items-center">
+                                <div class="col-lg-6 col-4 his--name text-center">
+                                    Пополнение средств
+                                </div>
+                                <div class="col-lg-2 col-2 his--price-default text-center">
+                                    150$
+                                </div>
+                                <div class="col-lg-2 col-3 his--date text-right">
+                                    11/12/19
+                                </div>
+                                <div class="col-lg-2 col-4 his--status-false text-lg-right text-center">
+                                    Отклонено <i class="far fa-question-circle d-lg-inline d-none"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="list--filter">
+                            <div class="list--filter d-lg-block d-none">
 
                             </div>
                         </div>
@@ -205,7 +219,26 @@
     </div>
 </div>
 
-<footer class="footer d-flex align-items-center">
+<div class="media-menu">
+    <div class="media-menu--header d-flex justify-content-center">
+        <img src="img/logo_footer.png" alt="">
+    </div>
+    <div class="media-menu--nav d-flex text-center justify-content-center">
+        <ul>
+            <li><a href="profile.html">Профиль</a></li>
+            <li><a href="my_robot1.html">Мой робот</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="team.html">Команда</a></li>
+        </ul>
+    </div>
+    <div class="media-menu--footer text-center">
+        <a href="#" class="media-menu--exit">Выход</a>
+        <br>
+        <a href="#">Лицензионное соглашение</a>
+    </div>
+</div>
+
+<footer class="footer d-none d-lg-flex align-items-center">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-4">
