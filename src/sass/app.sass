@@ -323,7 +323,7 @@ footer
   width: 100%
   background-size: cover
   background-repeat: no-repeat
-  overflow: hidden
+  overflow-y: hidden
 
 .main--cont
   padding-top: 300px
@@ -1636,4 +1636,9 @@ button.btn.close-btn
     -webkit-transform: rotate(360deg)
     -o-transform: rotate(360deg)
     transform: rotate(360deg)
+
+@media screen and (max-height: 940px)
+  .main
+    overflow-y: scroll
+
 
