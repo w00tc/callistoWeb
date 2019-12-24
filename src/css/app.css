@@ -804,6 +804,8 @@ button.btn.close-btn {
   width: 500px; }
 
 @media screen and (max-width: 750px) {
+  .main {
+    overflow-y: unset; }
   .main--img-container {
     padding-top: 40px;
     padding-bottom: 40px; }
@@ -1604,3 +1606,7 @@ button.btn.close-btn {
 @media screen and (max-height: 940px) {
   .main {
     overflow-y: scroll; } }
+
+@media screen and (max-width: 750px) {
+  .main {
+    overflow: hidden; } }
