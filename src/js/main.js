@@ -12,8 +12,8 @@ if(navigator.userAgent.indexOf('Firefox') !== -1) {
     hover_top.style.marginLeft = '550px';
     hover_bot.style.marginRight = '600px';
     hover_bot.style.marginLeft = 'unset';
-    phone_bot.style.marginLeft = '100px';
-    phone_top.style.marginRight = '100px';
+    phone_bot.style.marginLeft = '80px';
+    phone_top.style.marginRight = '80px';
     phone_top.style.marginLeft = 'unset';
     if (window.matchMedia('(max-width: 1366px)').matches) {
         hover_top.style.marginLeft = '400px';
@@ -78,15 +78,15 @@ function handleMediaMenu() {
     document.getElementsByClassName('media-menu')[0].style.display = "block";
 }
 
-document.getElementById('hover-img-main').addEventListener('mouseover', function () {
-    document.getElementById("onhover-img-main-top").style.opacity = '1';
-    document.getElementById("onhover-img-main-bot").style.opacity = '1';
-});
-
-document.getElementById('hover-img-main').addEventListener('mouseleave', function () {
-    document.getElementById("onhover-img-main-top").style.opacity = '0';
-    document.getElementById("onhover-img-main-bot").style.opacity = '0';
-});
+// document.getElementById('hover-img-main').addEventListener('mouseover', function () {
+//     document.getElementById("onhover-img-main-top").style.opacity = '1';
+//     document.getElementById("onhover-img-main-bot").style.opacity = '1';
+// });
+//
+// document.getElementById('hover-img-main').addEventListener('mouseleave', function () {
+//     document.getElementById("onhover-img-main-top").style.opacity = '0';
+//     document.getElementById("onhover-img-main-bot").style.opacity = '0';
+// });
 
 function makeAllTypesNone() {
     document.getElementById('repl-bank').style.display = 'none';

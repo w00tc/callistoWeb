@@ -11,7 +11,12 @@ body
 .nopadding
    padding: 0 !important
    margin: 0 !important
-
+input
+  outline: none
+button:focus
+  box-shadow: none
+.btn:focus
+  box-shadow: none
 /*****************Classes*************/
 .main-background
   background: linear-gradient(0.44deg, #000000 12.62%, rgba(0, 0, 0, 0) 68.07%), linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/background-profile.jpeg)
@@ -326,6 +331,8 @@ footer
 .main--img-container
     position: relative
     width: 100%
+    padding-top: 80px
+    padding-bottom: 80px
     .logo-img
       width: 300px
       height: 300px
@@ -370,7 +377,7 @@ footer
     transition-duration: 0.4s
 
 .main--bottom-text
-  padding-top: 140px
+  padding-top: 120px
   span
     color: #999
     font-size: 18px
@@ -548,7 +555,7 @@ button.btn.close-btn
   border: 2px solid #111
   &:hover
     cursor: pointer
-    border: 2px solid #EB5757
+    border: 0.5px solid rgb(235, 87, 87)
     transition-duration: 0.4s
 
 .special--item-header
@@ -595,7 +602,8 @@ button.btn.close-btn
       background-color: transparent
 
 /* history.html */
-
+.btn--filters:focus
+  outline: none
 .btn--filters
   width: 100%
   padding-top: 10px
@@ -605,10 +613,12 @@ button.btn.close-btn
   border-radius: 106px
   font-size: 24px
   border: 2px solid #222
+  outline: none
   &:hover
     color: white
     border-color: #EB5757
-
+    outline: none
+    text-decoration: none
 .history--filters
   padding-top: 30px
   z-index: 99
@@ -679,7 +689,9 @@ button.btn.close-btn
   border: 2px solid #222
   option
     background-color: #222
-
+.history--select:focus
+  border-color: #EB5757
+  box-shadow: none
 .team--head
   padding-top: 30px
   font-size: 24px
@@ -700,7 +712,13 @@ button.btn.close-btn
   left: 20px
   z-index: 500
   .btn
-    font-size: 32px
+    font-size: 30px
+    background-color: #222
+    border-radius: 50%
+    padding-top: 5px
+    padding-bottom: 5px
+    padding-right: 15px
+    padding-left: 15px
     color: white
 
 .member--typ-phone
@@ -780,14 +798,32 @@ button.btn.close-btn
   position: absolute
 
 #phone-img-main-bot
-  bottom: -50px
-  margin-left: 50px
+  bottom: -80px
+  margin-left: 40px
+  width: 400px
 
 #phone-img-main-top
-  top: -50px
-  margin-left: -50px
+  top: -80px
+  margin-left: -40px
+  width: 420px
 
 @media screen and (max-width: 750px)
+  .main--img-container
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .cent-logo
+    width: 80px
+    height: 80px
+
+  .bot-ell
+    width: 200px
+    height: 200px
+
+  .top-ell
+    width: 230px
+    height: 230px
+
   #modal-in, #modal-up
     font-size: 18px
   .modal-sign
@@ -829,14 +865,11 @@ button.btn.close-btn
   .main--img-container
     .bot-img, .top-img
       display: none
-    .logo-img
-      width: 165px
-      height: 165px
     .bot-phone-img,.top-phone-img
       display: block
 
   .main--btn-container
-    padding-top: 80px
+    padding-top: 100px
     .main-btn
       padding-left: 60px
       padding-right: 60px
@@ -976,7 +1009,6 @@ button.btn.close-btn
   padding-bottom: 100px
   ul
     margin: 0px
-    margin-left: -40px
     list-style: none
     li
       margin-top: 24px
@@ -1061,9 +1093,9 @@ button.btn.close-btn
     background: none
     margin-top: 19px
   .refferal-form h1
-    font-size: 35px
-  .refferal-form a
     font-size: 30px
+  .refferal-form a
+    font-size: 20px
   .balance
     background: none
     margin-top: 19px
@@ -1410,6 +1442,22 @@ button.btn.close-btn
   .repl--form-inputs p
     font-size: 14px
 @media (max-width: 481px)
+  .password-form
+    padding: 15px 30px 15px 30px
+  .code-form p
+    font-size: 16px
+  .code-form #unique-code
+    font-size: 23px
+  .password-form input
+    font-size: 14px
+  .password-form input:focus
+    border: 1px solid #fff
+  .password-form h1
+    font-size: 30px
+  .refferal-form h1
+    font-size: 20px
+  .h1-profile h1
+    font-size: 26px
   .repl--form-inputs button
     margin-right: 0px
     padding-right: 20px
@@ -1432,7 +1480,7 @@ button.btn.close-btn
   .repl--form-inputs label
     font-size: 10px
   .repl--form-inputs p
-    font-size: 10px
+    font-size: 9px
 @media (max-width: 410px)
   .repl--form-inputs button
     margin-right: 0px
@@ -1527,3 +1575,65 @@ button.btn.close-btn
     padding: 5px 7px 5px 7px
   .with-type
     font-size: 6px
+
+.blink
+  animation-name: blinker
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  animation-duration: 8s
+  -webkit-animation-name: blinker
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-timing-function: linear
+  -webkit-animation-duration: 8s
+
+.logo-ellipse
+  position: absolute
+  align-self: center
+  -webkit-animation: rotating 4s linear infinite
+  -moz-animation: rotating 4s linear infinite
+  -ms-animation: rotating 4s linear infinite
+  -o-animation: rotating 4s linear infinite
+  animation: rotating 4s linear infinite
+
+@keyframes blinker
+  from
+    opacity : 0.0
+  50%
+    opacity: 1.0
+  to
+    opacity: 0.0
+
+
+@-webkit-keyframes blinker
+  from
+    opacity : 0.0
+  50%
+    opacity: 1.0
+  to
+    opacity: 0.0
+
+@-webkit-keyframes rotating
+  from
+    -webkit-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+
+@keyframes rotating
+  from
+    -ms-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+  to
+    -ms-transform: rotate(360deg)
+    -moz-transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+    transform: rotate(360deg)
+
